@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SecureInterface</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}" />
+</head>
+<body>
+  <div class="page-shell">
+    <header class="topbar container">
+      <div class="brand">SecureInterface</div>
+      <nav class="nav">
+        <a href="#platform">Platform</a>
+        <a href="#solutions">Solutions</a>
+        <a href="#security">Security</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <button class="nav-button">Login</button>
+    </header>
+
+    <main class="container hero">
+      <section class="hero-copy">
+        <p class="eyebrow">Business security solutions</p>
+        <h1>Protect what powers your business.</h1>
+        <p class="lead">
+          SecureInterface helps teams defend critical systems, streamline compliance,
+          and maintain trust with real-time security visibility.
+        </p>
+        <div class="cta-row">
+          <button class="primary-btn">Get Started</button>
+          <button class="secondary-btn">Book a Demo</button>
+        </div>
+        <ul class="trust-list">
+          <li>24/7 Monitoring</li>
+          <li>Threat intelligence</li>
+          <li>Compliance-ready workflows</li>
+        </ul>
+      </section>
+
+      <aside class="login-card" aria-label="Login panel">
+        <div class="card-header">
+          <span class="badge">Secure Access</span>
+          <h2>Welcome back</h2>
+        </div>
+
+        <form id="loginForm">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" placeholder="name@example.com" required />
+
+          <label for="password">Password</label>
+          <input id="password" name="password" type="password" placeholder="Enter your password" required />
+
+          <button type="submit" class="login-btn">Sign In</button>
+        </form>
+
+        <div class="card-links">
+          <a href="#">Forgot password?</a>
+          <a href="#">Create account</a>
+        </div>
+
+        <div id="statusMessage" class="status-message" aria-live="polite"></div>
+      </aside>
+    </main>
+
+    <section id="platform" class="container metrics">
+      <div class="metric-box">
+        <strong>99.9%</strong>
+        <span>System uptime</span>
+      </div>
+      <div class="metric-box">
+        <strong>24/7</strong>
+        Threat monitoring
+      </div>
+      <div class="metric-box">
+        <strong>100%</strong>
+        Security-first design
+      </div>
+    </section>
+
+    <section id="solutions" class="container feature-grid">
+      <article class="feature-card">
+        <h3>Threat Detection</h3>
+        <p>Identify suspicious activity before it escalates into disruption.</p>
+      </article>
+      <article class="feature-card">
+        <h3>Business Continuity</h3>
+        <p>Reduce downtime and keep critical operations running with confidence.</p>
+      </article>
+      <article class="feature-card">
+        <h3>Compliance Ready</h3>
+        <p>Support governance, risk control, and security reporting standards.</p>
+      </article>
+    </section>
+  </div>
+
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
